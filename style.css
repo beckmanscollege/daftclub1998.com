@@ -63,10 +63,27 @@ html {
    line-height: 140%
 }
 
+.screen-content iframe {
+    overflow: hidden; /* Hides the scrollbar */
+    width: 100%;
+    height: 100%;
+    border: none;
+    mix-blend-mode: screen;
+    filter: grayscale(100%);
+}
+
+.screen-content::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.screen-content iframe::-webkit-scrollbar {
+    display: none; /* Attempts to hide scrollbar in iframe for Chrome, Safari, and Opera */
+}
+
 /* Style for the links */
 .button-link {
   position: absolute;
-  color: #4d4b4b; /* Text color */
+  color: white; /* Text color */
   text-align: center;
   text-decoration: none; /* Remove underline from links */
   font-size: 1.5rem;
@@ -119,7 +136,7 @@ html {
   position: absolute;
   transform: translateX(-50%);
   margin: 5px;
-  color: #4d4b4b; /* Text color */
+  color: white; /* Text color */
   font-size: 1rem;
   font-weight: bold;
   border: none;
@@ -177,10 +194,10 @@ html {
 
 #videoPlayer {
     position: absolute;
-    top: 4%;
+    top: -5%;
     left: -4%;
     width: 150%; /* Adjust the width as necessary to fit in the screen-content div */
-    height: auto; /* Maintain aspect ratio */
+    height: 200%; /* Maintain aspect ratio */
     /* Additional styling if needed */
 }
 
