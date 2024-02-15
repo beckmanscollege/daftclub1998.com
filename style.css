@@ -1,0 +1,200 @@
+body,
+html {
+  background-image: url('https://cdn.glitch.global/36362b4b-5e69-4afc-8a43-34a999827cb4/Texturelabs_Fabric_177L%20BG.jpg?v=1707978737498'); /* Replace with your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+
+}
+
+.drum-machine-container {
+  position: relative; /* Container for positioning */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drum-machine {
+  position: relative; /* Keep this to position children absolutely */
+  width: 1000px; /* Set a fixed width for the drum machine */
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drum-machine img {
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: contain; /* This will make sure the image is contained within its box without distortion */
+}
+
+.screen-content {
+  position: absolute;
+  top: 7%; /* Adjust to fit the screen of the drum machine */
+  left: 5%; /* Adjust to fit the screen of the drum machine */
+  right: 32%; /* Adjust to fit the screen of the drum machine */
+  bottom: 50%; /* Adjust to fit the screen of the drum machine */
+  color: #ffffff; /* White text color */
+  text-shadow: 0 0 7px #ffffff;
+  mix-blend-mode: exclusion;
+}
+
+/* Headings and paragraphs within the screen content area */
+.screen-content h1,
+.screen-content p {
+  margin: 0px;
+  padding: 0 20px; /* Add some horizontal padding */
+}
+
+.screen-content p {
+  font-size: 1.1rem;
+   line-height: 140%
+}
+
+/* Style for the links */
+.button-link {
+  position: absolute;
+  color: #4d4b4b; /* Text color */
+  text-align: center;
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* Add additional styling for your links here */
+}
+
+.button-link:hover {
+  text-shadow: 0 0 7px #ffffff, 0 0 10px #ffffff, 0 0 21px #ffffff;
+  /* Neon glow effect in red */
+}
+
+/* Positioning for each link */
+#link1 {
+  top: 62%; /* Adjust the percentage to position your link correctly */
+  left: 11%; /* Adjust the percentage to position your link correctly */
+}
+
+#link2 {
+  top: 62%;
+  left: 32%;
+}
+
+#link3 {
+  top: 62%;
+  left: 53.5%;
+}
+
+#link4 {
+  top: 83%;
+  left: 11%;
+}
+
+#link5 {
+  top: 83%;
+  left: 34.25%;
+}
+
+#link6 {
+  top: 83%;
+  left: 54%;
+}
+
+.audio-player {
+  display: none;
+}
+
+#playButton,
+#pauseButton {
+  position: absolute;
+  transform: translateX(-50%);
+  margin: 5px;
+  color: #4d4b4b; /* Text color */
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  background: none; /* Removes the default button background */
+  cursor: pointer; /* Changes the cursor to indicate it's clickable */
+  /* Additional styling for the buttons */
+}
+
+#playButton {
+  left: 82.25%;
+  top: 63.25%; /* Adjust as needed */
+}
+
+#pauseButton {
+  position: absolute;
+  left: 82.25%;
+  top: 81.5%; /* Adjust as needed */
+}
+
+#playButton:hover,
+#pauseButton:hover {
+  text-shadow: 0 0 7px #ffffff, 0 0 10px #ffffff, 0 0 21px #ffffff;
+}
+
+#commentsSection {
+    position: absolute; /* or 'relative', depending on your current setup */
+    top: 20%;
+    left: 2%; /* Adjust this value to move it to the right */
+    /* ... other styles ... */
+}
+
+#commentBox {
+    position: absolute;
+    width: 80%;
+    height: 50px;
+    top: 10%;
+    left: 3%;
+    margin-bottom: 10px;
+    background: none; /* Removes the background */
+    border: none; /* Removes the border */
+    resize: none; /* Optional: Disables resizing of the textarea */
+    color: white;
+    mix-blend-mode: screen;
+}
+
+#commentsSection p {
+    background-color: none;
+    font-size: 1.1rem;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    mix-blend-mode: screen;
+}
+
+#videoPlayer {
+    position: absolute;
+    top: 4%;
+    left: -4%;
+    width: 150%; /* Adjust the width as necessary to fit in the screen-content div */
+    height: auto; /* Maintain aspect ratio */
+    /* Additional styling if needed */
+}
+
+/* Make the drum machine responsive */
+@media (max-width: 1000px) {
+  .drum-machine {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 100%; /* Ensure it doesn't exceed 100% of the viewport width */
+  }
+
+  /* Adjust screen content positioning for smaller screens */
+  .screen-content {
+    top: 7%; /* Adjust to fit the screen of the drum machine */
+    left: 5%; /* Adjust to fit the screen of the drum machine */
+    right: 30%; /* Adjust to fit the screen of the drum machine */
+    bottom: 50%; /* Adjust to fit the screen of the drum machine */
+  }
+}
